@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+body{
+    background-color: rgb(243, 243, 253);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header{
+    padding: 20px;
+    background-color: rgb(222, 222, 252);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.274);
+}
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.heading h1 {
+    margin-bottom: 10px;
+}
+.nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+ul .right {
+    margin-left: auto;
+}
+li a{
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+}
+li a:hover {
+    color: purple;
+}
+
+main {
+    flex-grow: 1;
+}
+.introduction,.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.introduction h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.about-me-container,.form-container{
+    display: flex;
+    gap: 50px;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.274);
+    border-radius: 20px;
+    margin: 50px 30px;
+}
+.about-me-image, .form-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.about-me-text,.form-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.about-me-one {
+    margin-bottom: 10px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.image-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1300px;
+}
+.gallery h3{
+    text-align: center;
+}
+.image{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    vertical-align: middle;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+figure {
+    margin: 20px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.274);
+    border-radius: 10px;
+}
+figcaption {
+    text-align: center;
+    background-color: rgb(222, 222, 252);
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.image-link {
+    text-decoration: none;
+    color: black;
+}
+figure:hover {
+    box-shadow: 5px 2px 5px 1px rgba(0, 0, 0, 0.274);
+    transform: scale(1.1);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#submit {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#name,#email,#mess {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+.form-text {
+    gap: 10px
+}
+textarea {
+    resize: none;
+}
+
+footer {
+    padding: 20px;
+    background-color: rgb(222, 222, 252);
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 1000px) {
+    .about-me-container {
+        flex-direction: column;
+    }
+    .about-me-text {
+        align-items: center;
+    }
+    .form-container {
+        flex-direction: column;
+    }
+    .form-text {
+        align-items: center;
+    }
+    textarea {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 700px) {
+    textarea {
+        max-width: 300px;
+    }
+    .nav ul > *{
+        flex-shrink: 0;
+    }
+}
